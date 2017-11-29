@@ -1,0 +1,19 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "Learning Node Websocket",
+  "main": "app.js",
+  "author": "Manan Mehta",
+  "license": "MIT",
+  "scripts": {
+      "start": "node app.js",
+      "watch": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
