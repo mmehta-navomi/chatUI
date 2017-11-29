@@ -2,13 +2,7 @@
 
 var socket = io.connect('http://localhost:3000');
 
-// Query DOM
 var userInfo = {};
-// var handle = $('#handle');
-// var message = $('#message');
-// var btn = $('#send');
-// var output = $('#output');
-// var broadcast = $('#broadcast');
 
 $( document ).ready((event) => {
   // Handler for .ready() called.
@@ -20,7 +14,7 @@ $( document ).ready((event) => {
       // console.log('Your ChatId:',data);
       userInfo.chatId = data;
       // console.log('Userinfo', userInfo);
-      handle.innerHTML = '<em style="padding:20px">Username: '+ username + '</em>';
+      handler.innerHTML = '<em style="padding:20px">Username: '+ username + '</em>';
       $( "#message" ).focus();
   });
 });
@@ -58,11 +52,9 @@ $('#send').keypress((event) => {
 socket.on('chat', (data) => {
     $('#broadcast').html('');
     $('#output').append('<p><strong>' + data.username +'</strong>: ' + data.message + '</p>');
-    // broadcast.innerHTML = '';
-    // output.innerHTML += '<p><strong>' + data.handle +'</strong>: ' + data.message + '</p>';
+
 });
 
 socket.on('typing', (data) => {
     $('#broadcast').html('<p><em>' + data + ' is typing ...</em></p>')
-    // broadcast.innerHTML = '<p><em>' + data + 'is typing ...</em></p>';
 })
