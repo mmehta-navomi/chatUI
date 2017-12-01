@@ -7,4 +7,4 @@ Run:
 1. yarn install
 2. sudo yarn start
 3. Run on http://localhost:3000
-4. Talk to other users using different browser windows
+4. Talk to other users using different browser windows at url http://localhost:3000
